@@ -8,9 +8,9 @@ Trello para documento escrito.
 4 CRUDS:
 	1. Administración de Usuarios (Agregar, Listar, Eliminar, Actualizar)
 	2. Creación de Votaciones (Agregar, Listar, Eliminar, Actualizar):
-		2.1. Crear nueva votación (Agregar, Listar, Eliminar, Actualizar).
-		2.2. Crear candidatos (Agregar, Listar, Eliminar, Actualizar).
-	3. Creación de Encuestas (Agregar, Listar, Eliminar, Actualizar)
+		2.1.Votaciones (Agregar, Listar, Eliminar, Actualizar).
+		2.2. Candidatos / Opciones (Agregar, Listar, Eliminar, Actualizar).
+	3. Encuestas (Agregar, Listar, Eliminar, Actualizar)
 		
 Primer Avance:
 	1. Estructura y Base de Datos
