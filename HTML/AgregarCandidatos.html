@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="hydrated">
+    <head>
+         <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <!-- AOS CSS-->
+        <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="/CSS/map.css" /> -->
+        <!--Custom CSS-->
+        <link href="/CSS/MainTemplate.css" type="text/css" rel="stylesheet"/>
+        <script src="/JS/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/CSS/datatable.css">
+        <script type="text/javascript" charset="utf8" src="/JS/DataTables/datatables.js"></script>
+        </head>
+    <body>
+        <div class="container">
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="">
+                            <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <span class="title">Votaciones en linea</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/HTML/PaginaInicio.html">
+                            <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <span class="title">Votaciones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <span class="title">Resultados</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <span class="title">Mi perfil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <span class="title">Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <span class="title">Cerrar sesión</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Cuerpo-->
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Que desea buscar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </div>
+                <div class="user">
+                    
+                </div>
+            </div>
+            <div class="body-center card-body">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label class="control-label">Prueba</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-font"></i></span>
+                            </div>
+                            <input id="" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label class="control-label">Prueba 2</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-font"></i></span>
+                                </div>
+                                <input id="" type="text" class="form-control" />
+                            </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Agregar" class="btn btn-primary float-right" />
+                </div>
+            </div>
+        </div>
+        <!--Fin-->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script>
+        //MenuToggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+        
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active')
+
+        }
+        
+        //Selección de items
+           let list = document.querySelectorAll('.navigation li');
+           function activeLink(){
+               list.forEach((item) =>
+               item.classList.remove('hovered'));
+               this.classList.add('hovered')
+           }
+           list.forEach((item) =>
+           item.addEventListener('mouseover', activeLink));
+           $(document).ready( function () {
+                $('#TablaVotaciones').DataTable({
+                    language: {
+                    "decimal": "",
+                    "emptyTable": "No hay información",
+                    "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                    "infoEmpty": "Mostrando 0 to 0 of 0 registros",
+                    "infoFiltered": "(Filtrado de _MAX_ total registros)",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "Mostrar _MENU_ registros",
+                    "loadingRecords": "Cargando...",
+                    "processing": "Procesando...",
+                    "search": "Buscar:",
+                    "zeroRecords": "Sin resultados encontrados",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Ultimo",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    }
+                }
+                });
+            } );
+        </script>
+    </body>
+</html>
