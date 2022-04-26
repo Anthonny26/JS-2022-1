@@ -1,0 +1,26 @@
+{
+  "name": "js-2022-1",
+  "version": "1.0.0",
+  "description": "Repositorio para administración de código para el AT de JavaScript ULACIT 2022 Primer Cuatrimestre",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon JS/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseSH17/JS-2022-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseSH17/JS-2022-1/issues"
+  },
+  "homepage": "https://github.com/JoseSH17/JS-2022-1#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.3.1",
+    "nodemon": "^2.0.15"
+  }
+}
